@@ -25,4 +25,4 @@ $ python3 topo-bisec.py <nnodes> <degree> [-i <iteration>] #default iteration is
 * This includes the calculation of bisection bandwidth (authored by ikki).
 
 ## Output
-The generated topology (edge file) and output information are stored in the output/ folder. 
+The generated topology (edge file) and output information are stored in the *output/* folder. 
