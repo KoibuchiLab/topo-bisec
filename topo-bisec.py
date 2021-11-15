@@ -26,7 +26,7 @@ def main(args):
 	low_diam, low_aspl = lower_bound_of_diam_aspl(nnodes, degree)
 	g = nx.random_regular_graph(degree, nnodes, 0)
 	
-	basename = "n{}d{}.random".format(nnodes, degree)
+	basename = "n{}d{}r.bisec".format(nnodes, degree)
 	edgefile = basename + ".edges"
 	dir = "output/"
 	if not os.path.exists(dir):
@@ -50,9 +50,9 @@ def main(args):
 		else:
 			bisec = bisec_update # update
 			LOOP = args.i
-		# print(LOOP, end=" ", flush=True)
+		print(LOOP, end=" ", flush=True)
 		# print(".", end="", flush=True) # prevent freezing
-	# print()
+	print()
 	output(basename, g, nnodes, degree, low_diam, low_aspl, bisec, LOOP)
 
 	return
